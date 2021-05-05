@@ -8,12 +8,12 @@
     <title>Capstone Demo</title>
     
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     
     <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
+    <script src="/script.js" defer></script>
   </head>  
   <body>
     
@@ -28,8 +28,9 @@
         <section>
             <!-- <span class="poem"><span>Twist,</span>&nbsp;<span>turn.</span>&nbsp;<span>Shake.</span></span> -->
             <!-- <img src="IMG3.jpg" alt="Test image"> -->
+            <main class="Loop js-loop">
             <div class="spacing"></div>
-            <div class="justify">Twist, turn. Shake.</div>
+            <div class="justify" id="line1">Twist, turn. Shake.</div>
             <div class="justify">As cold water hisses against bare skin,</div>
             <div class="justify">Trickling down my naked back.</div>
             <div class="justify">Wet hair forked like a snake's tongue, I've found</div>
@@ -59,19 +60,6 @@
             <div class="justify">And wonder what it will be like,</div>
             <div class="justify">The waves lapping over our bodies,</div>
             <div class="justify">A slow drift into nothing.</div>
-            <div class="justify">And wonder what it will be like,</div>
-            <div class="justify">The waves lapping over our bodies,</div>
-            <div class="justify">A slow drift into nothing.</div>
-            <div class="justify">Yes, how easy it is to slip away</div>
-            <div class="justify">Black brushed into silver strands</div>
-            <div class="justify">At night, sinking into the screen</div>
-            <div class="justify">At dawn, once again</div>
-            <div class="justify">Coming into being, a means</div>
-            <div class="justify">To an end I am still drifting towards,</div>
-            <div class="justify">Drowning in it — I close my eyes</div>
-            <div class="justify">And wonder what it will be like,</div>
-            <div class="justify">The waves lapping over our bodies,</div>
-            <div class="justify">A slow drift into nothing.</div>
             <div class="justify">How easy it is to slip away</div>
             <div class="justify">Black brushed into silver strands</div>
             <div class="justify">At night, sinking into the screen</div>
@@ -81,6 +69,9 @@
             <div class="justify">An end back to the beginning.</div>
             <div class="justify">The same body huddled under the showerhead,</div>
             <div class="justify">The same bodies in which we live once more.</div>
+            <div class="justify is-clone">Twist, turn. Shake.</div>
+            <div class="justify is-clone">As cold water hisses against bare skin,</div>
+            </main>
         </section>
         <footer class="footer">
         </footer>
