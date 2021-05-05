@@ -2,8 +2,35 @@ html {
     background-color: #EEEEEE;
   }
 
+  /* html { 
+    background: url(/VidTest1.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
 body, html, window {
-    overflow: scroll;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.Loop {
+  position: relative;
+  height: 100%;
+  /* overflow: auto; */
+  -webkit-overflow-scrolling: touch;
+}
+
+::scrollbar {
+  display: none;
 }
 
   body,
@@ -16,6 +43,7 @@ body, html, window {
     -webkit-text-size-adjust: 100%;
     text-align: center;
     text-justify: inter-word;
+    color: white;
   }
 
 .spacing {
