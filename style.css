@@ -1,0 +1,46 @@
+html {
+    background-color: #EEEEEE;
+  }
+
+body, html, window {
+    overflow: scroll;
+}
+
+  body,
+  h1,
+  p {
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-size: 18.5px;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    text-align: center;
+    text-justify: inter-word;
+  }
+
+.spacing {
+    padding: 100px;
+}
+
+#title {
+    padding: 30px 0px;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: -10px;
+    -webkit-mask-image: linear-gradient(black 65%, rgba(0, 0, 0, 0.5) 100%);
+    /* text-align: left; */
+}
+
+.justify {
+      text-align: justify;
+      word-spacing: -10px;
+      padding: 60px;
+  }
+
+.justify:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+  }
