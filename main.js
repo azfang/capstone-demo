@@ -1,5 +1,5 @@
 const URL =
-        "data.json";
+        "https://github.com/azfang/capstone-demo/blob/d2ea03d6a33eb84504b0d4155fcc6532b061e3f8/data.json";
       document.addEventListener("DOMContentLoaded", () => {
         //set up the IntersectionObserver to load more images if the footer is visible.
         //URL - https://gist.githubusercontent.com/prof3ssorSt3v3/1944e7ba7ffb62fe771c51764f7977a4/raw/c58a342ab149fbbb9bb19c94e278d64702833270/infinite.json
