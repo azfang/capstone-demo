@@ -1,36 +1,55 @@
 body, html, window {
     background-color: #EFEFEF;
     height: 100%;
+    cursor: none;
   }
 
 body::-webkit-scrollbar {
     display: none;
   }
 
-  #myVideo {
+  #VideoMain {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+    transition: opacity 1s ease-in-out;
+  }
+
+  /* #VideoTop:hover {
+    opacity: 0;
+  } */
+
+  /* #VideoBottom {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: 1;
-  }
+  } */
 
 main {
   position: relative;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
+  /* background-image: url("/IMG1.jpg");
+  mix-blend-mode: difference; */
+}
+
+main::before {
+  background-image: url("/IMG1.jpg");
+  mix-blend-mode: difference;
 }
 
 body {
     font-family: 'Cormorant', serif;
     font-weight: 300;
-    font-size: 21px;
+    font-size: 21.5px;
     line-height: 1;
-    /* -webkit-text-size-adjust: 100%; */
-    /* text-align: justify;
-    text-justify: inter-word; */
     color: white;
   }
 
@@ -51,6 +70,7 @@ body {
       text-align: justify;
       word-spacing: -10px;
       padding: 60px;
+      font-style: normal;
   }
 
 .justify:after {
@@ -58,6 +78,10 @@ body {
       display: inline-block;
       width: 100%;
   }
+
+/* .justify:hover {
+    font-style: italic;
+} */
 
   footer {
     padding: 100px;
