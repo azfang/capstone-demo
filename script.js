@@ -1,4 +1,4 @@
-// let pages = -1;
+let pages = 0;
 let i = 0;
 var video = document.getElementById("VideoMain");
 video.setAttribute('src', 'IHateThis.mp4');
@@ -15,16 +15,15 @@ const URL =
           rootMargins: "0px",
           threshold: 0.5
         };
-        let pages = 0;
         const observer = new IntersectionObserver(handleIntersect, options);
         observer.observe(document.querySelector("footer"));
         //an initial load of some data
         getData();
       });
       function handleIntersect(entries) {
-        if (entries[0].isIntersecting) {
+        if (entries[0].isIntersecting && pages >= 1) {
           pages++;
-          if (pages === 1) {
+          if (pages === 2) {
             video.setAttribute('src', 'IHateThis2.mp4');
           }
           console.warn("something is intersecting with the viewport");
