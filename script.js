@@ -1,4 +1,4 @@
-let pages = 0;
+let pages = -1;
 let i = 0;
 var video = document.getElementById("VideoMain");
 video.setAttribute('src', 'IHateThis.mp4');
