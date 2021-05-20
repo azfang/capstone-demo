@@ -1,7 +1,7 @@
 let pages = 0;
 let i = 0;
 var video = document.getElementById("VideoMain");
-video.setAttribute('src', '/IHateThis.mp4');
+video.setAttribute('src', 'IHateThis.mp4');
 // window.onscroll = scrollFunction;
 // window.addEventListener("scroll", scrollFunction);
 
@@ -24,7 +24,7 @@ const URL =
         if (entries[0].isIntersecting) {
           pages++;
           if (pages === 1) {
-            video.setAttribute('src', '/IHateThis2.mp4');
+            video.setAttribute('src', 'IHateThis2.mp4');
           }
           console.warn("something is intersecting with the viewport");
           getData();
@@ -62,6 +62,6 @@ const URL =
           });
       }
       if (pages === 1 && i === 7) {
-        video.setAttribute('src', '/Waves_Scene1.mp4');
+        video.setAttribute('src', 'Waves_Scene1.mp4');
         console.log("hi");
       }
