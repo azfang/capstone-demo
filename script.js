@@ -1,4 +1,4 @@
-let pages = -1;
+// let pages = -1;
 let i = 0;
 var video = document.getElementById("VideoMain");
 video.setAttribute('src', 'IHateThis.mp4');
@@ -15,6 +15,7 @@ const URL =
           rootMargins: "0px",
           threshold: 0.5
         };
+        let pages = 0;
         const observer = new IntersectionObserver(handleIntersect, options);
         observer.observe(document.querySelector("footer"));
         //an initial load of some data
