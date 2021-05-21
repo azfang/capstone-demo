@@ -1,7 +1,9 @@
 let pages = 0;
 let i = 0;
-var video = document.getElementById("VideoMain");
-video.setAttribute('src', 'IHateThis.mp4');
+var video1 = document.getElementById("VideoTop");
+var video2 = document.getElementById("VideoBottom");
+video1.setAttribute('src', 'IHateThis.mp4');
+video2.setAttribute('src', 'IHateThis2.mp4');
 // window.onscroll = scrollFunction;
 // window.addEventListener("scroll", scrollFunction);
 
@@ -26,48 +28,24 @@ const URL =
           console.warn("something is intersecting with the viewport");
           getData();
           pages++;
+          video1.setAttribute('src', 'IHateThis.mp4');
+          // video1.classList.toggle('fadein');
+          video1.style.opacity = "1";
       }
     }
 
       function handleLineIntersect(entries) {
         if (entries[0].isIntersecting) {
-            video.setAttribute('src', 'IHateThis2.mp4');
-        }
-        else {
-          video.setAttribute('src', 'IHateThis.mp4');
+          video1.style.opacity = "0";
         }
       }
 
       function handleLine2Intersect(entries) {
         if (entries[0].isIntersecting) {
-            video.setAttribute('src', 'IHateThis3.mp4');
-        }
-        else {
-          video.setAttribute('src', 'IHateThis.mp4');
+          video1.style.opacity = "1";
+          video1.setAttribute('src', 'IHateThis3.mp4');
         }
       }
-
-      function handleLine3Intersect(entries) {
-        if (entries[0].isIntersecting) {
-            video.setAttribute('src', 'painting_test.mp4');
-        }
-        else {
-          video.setAttribute('src', 'IHateThis.mp4');
-        }
-      }
-    
-    // function scrollFunction() {
-    //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    //     video.setAttribute('src', '/Scene1.mp4');
-    //   } 
-      // else {
-      //   video.setAttribute('src', '/Scene1.mp4');
-      // }
-  // }
-
-  //   window.addEvent('scroll',function(replaceVideo) {
-  //     video.setAttribute('src', '/Painting_Waves1.mp4');
-  // });
 
       function getData() {
         let main = document.querySelector("main");
@@ -75,16 +53,7 @@ const URL =
         fetch(URL)
           .then(response => response.json())
           .then(data => {
-            // i++;
-            // data.items.forEach(item => {
-            //   let poetryText = document.createElement("div");
-            //   poetryText.classList.add("justify");
-            //   poetryText.id = `line-${pages}-${i}`;
-            //   poetryText.textContent = item.name;
-            //   main.appendChild(poetryText);
-            //   i++;
-            // });
-            data.items.forEach(item => {
+              data.items.forEach(item => {
               let poetryText = document.createElement("div");
               poetryText.classList.add("justify");
               poetryText.id = `line-${pages}-${i}`;
