@@ -2,8 +2,8 @@ let pages = 0;
 let i = 0;
 var video1 = document.getElementById("VideoTop");
 var video2 = document.getElementById("VideoBottom");
-video1.setAttribute('src', 'IHateThis.mp4');
-video2.setAttribute('src', 'IHateThis2.mp4');
+video1.setAttribute('src', 'Scene1.mp4');
+video2.setAttribute('src', 'Scene2.mp4');
 
 const URL =
         "data.json";
@@ -26,8 +26,7 @@ const URL =
           console.warn("something is intersecting with the viewport");
           getData();
           pages++;
-          video1.setAttribute('src', 'IHateThis.mp4');
-          // video1.classList.toggle('fadein');
+          video1.setAttribute('src', 'Scene1.mp4');
           video1.style.opacity = "1";
       }
     }
@@ -35,7 +34,7 @@ const URL =
     function handleLineIntersect(entries) {
       if (entries[0].isIntersecting) {
         video1.style.opacity = "1";
-        video1.setAttribute('src', 'IHateThis.mp4');
+        video1.setAttribute('src', 'Scene1.mp4');
       }
     }
 
@@ -48,14 +47,14 @@ const URL =
       function handleLine3Intersect(entries) {
         if (entries[0].isIntersecting) {
           video1.style.opacity = "1";
-          video1.setAttribute('src', 'IHateThis3.mp4');
+          video1.setAttribute('src', 'Scene3.mp4');
         }
       }
 
       function handleLine4Intersect(entries) {
         if (entries[0].isIntersecting) {
           video1.style.opacity = "1";
-          video1.setAttribute('src', 'IHateThis4.mp4');
+          video1.setAttribute('src', 'Scene4.mp4');
         }
       }
 
