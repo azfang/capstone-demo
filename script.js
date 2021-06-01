@@ -25,9 +25,9 @@ const URL =
         if (entries[0].isIntersecting) {
           console.warn("something is intersecting with the viewport");
           getData();
-          pages++;
-          video1.setAttribute('src', 'Scene1.mp4');
-          video1.style.opacity = "1";
+          if (pages >= 1) {
+            pages++;
+          }
       }
     }
 
@@ -55,6 +55,41 @@ const URL =
         if (entries[0].isIntersecting) {
           video1.style.opacity = "1";
           video1.setAttribute('src', 'Scene4.mp4');
+          pages = "1";
+        }
+      }
+
+      function handleLine5Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "0";
+          video2.setAttribute('src', 'Scene1A.mp4');
+        }
+      }
+
+      function handleLine6Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "1";
+          video1.setAttribute('src', 'Scene2A.mp4');
+        }
+      }
+
+      function handleLine7Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "0";
+          video2.setAttribute('src', 'Scene3A.mp4');
+        }
+      }
+
+      function handleLine8Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "1";
+          video1.setAttribute('src', 'Scene4A.mp4');
+        }
+      }
+
+      function handleLine9Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video2.setAttribute('src', 'Scene2.mp4');
         }
       }
 
@@ -71,7 +106,7 @@ const URL =
               poetryText.textContent = item.name;
               main.appendChild(poetryText);
               i++;
-              if (i === 37) {
+              if (i === 79) {
                 i = "0";
               }
 
@@ -84,7 +119,7 @@ const URL =
                 observer.observe(poetryText);
               }
 
-              if (i === 10) {
+              if (i === 12) {
                 const observer = new IntersectionObserver(handleLine2Intersect, {
                   root: null,
                   rootMargins: "0px",
@@ -93,7 +128,7 @@ const URL =
                 observer.observe(poetryText);
               }
 
-              if (i === 20) {
+              if (i === 22) {
                 const observer = new IntersectionObserver(handleLine3Intersect, {
                   root: null,
                   rootMargins: "0px",
@@ -102,7 +137,7 @@ const URL =
                 observer.observe(poetryText);
               }
 
-              if (i === 30) {
+              if (i === 32) {
                 const observer = new IntersectionObserver(handleLine4Intersect, {
                   root: null,
                   rootMargins: "0px",
@@ -111,7 +146,7 @@ const URL =
                 observer.observe(poetryText);
               }
 
-              if (i === 40) {
+              if (i === 45) {
                 const observer = new IntersectionObserver(handleLine5Intersect, {
                   root: null,
                   rootMargins: "0px",
@@ -119,6 +154,43 @@ const URL =
                 });
                 observer.observe(poetryText);
               }
+
+              if (i === 51) {
+                const observer = new IntersectionObserver(handleLine6Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 60) {
+                const observer = new IntersectionObserver(handleLine7Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 68) {
+                const observer = new IntersectionObserver(handleLine8Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 76) {
+                const observer = new IntersectionObserver(handleLine9Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+              
             });
           });
       }
