@@ -1,11 +1,23 @@
 body, html, window {
     background-color: #EFEFEF;
     height: 100%;
-    cursor: none;
+    /* cursor: none; */
   }
 
 body::-webkit-scrollbar {
     display: none;
+  }
+
+  @media only screen and (min-width: 601px) {
+    body {
+      font-size: 21.5px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
   }
 
   #VideoTop {
@@ -50,9 +62,10 @@ main::before {
 
 body {
     font-family: 'Cormorant', serif;
+    /* font-size: 21.5px; */
     font-weight: 300;
-    font-size: 21.5px;
     line-height: 1;
+    /* color: #59a0b5; */
     color: white;
   }
 
@@ -66,6 +79,10 @@ body {
       padding: 60px;
       font-style: normal;
   }
+
+/* .justify:hover{
+      color: black;
+} */
 
 .justify:after {
       content: "";
