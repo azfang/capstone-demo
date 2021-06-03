@@ -89,7 +89,29 @@ const URL =
 
       function handleLine9Intersect(entries) {
         if (entries[0].isIntersecting) {
-          video2.setAttribute('src', 'Scene2.mp4');
+          video1.style.opacity = "0";
+          video2.setAttribute('src', 'Scene1B.mp4');
+        }
+      }
+
+      function handleLine10Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "1";
+          video1.setAttribute('src', 'Scene2B.mp4');
+        }
+      }
+
+      function handleLine11Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "0";
+          video2.setAttribute('src', 'Scene3B.mp4');
+        }
+      }
+
+      function handleLine12Intersect(entries) {
+        if (entries[0].isIntersecting) {
+          video1.style.opacity = "1";
+          video1.setAttribute('src', 'Scene4B.mp4');
         }
       }
 
@@ -106,7 +128,7 @@ const URL =
               poetryText.textContent = item.name;
               main.appendChild(poetryText);
               i++;
-              if (i === 79) {
+              if (i === 156) {
                 i = "0";
               }
 
@@ -182,8 +204,71 @@ const URL =
                 observer.observe(poetryText);
               }
 
-              if (i === 76) {
+              if (i === 78) {
                 const observer = new IntersectionObserver(handleLine9Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 92) {
+                const observer = new IntersectionObserver(handleLine10Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 102) {
+                const observer = new IntersectionObserver(handleLine11Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 112) {
+                const observer = new IntersectionObserver(handleLine12Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 122) {
+                const observer = new IntersectionObserver(handleLine5Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 132) {
+                const observer = new IntersectionObserver(handleLine6Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 142) {
+                const observer = new IntersectionObserver(handleLine7Intersect, {
+                  root: null,
+                  rootMargins: "0px",
+                  threshold: 0.5
+                });
+                observer.observe(poetryText);
+              }
+
+              if (i === 152) {
+                const observer = new IntersectionObserver(handleLine8Intersect, {
                   root: null,
                   rootMargins: "0px",
                   threshold: 0.5
